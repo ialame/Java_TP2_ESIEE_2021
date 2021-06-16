@@ -1,18 +1,18 @@
-package Probleme1;
+package Probleme3;
 
-public class Cercle extends Point {
+public class Sphere extends Point {
     protected double rayon;
 
-    public Cercle() {
+    public Sphere() {
         setRayon(0);
     }
 
-    public Cercle(double rayon) {
+    public Sphere(double rayon) {
         this.rayon = rayon;
     }
 
-    public Cercle(int x, int y, double rayon) {
-        super(x, y);
+    public Sphere(int x, int y,int z, double rayon) {
+        super(x, y, z);
         this.rayon = rayon;
     }
 
@@ -26,12 +26,18 @@ public class Cercle extends Point {
     }
 
     public double aire() {
-        return Math.PI * rayon * rayon;
+        return 4 * Math.PI * rayon * rayon;
     }
-
+    public double volume() {
+        return 4 * Math.PI * rayon * rayon * rayon /3;
+    }
     @Override
     public String toString() {
         return " Centre=" + super.toString() + ", Rayon=" + rayon;
+    }
+    @Override
+    public String getNom() {
+        return "Sphere";
     }
 }
 

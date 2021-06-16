@@ -1,4 +1,4 @@
-package Probleme1;
+package Probleme1.Exercice1;
 
 import javax.swing.*;
 import java.text.DecimalFormat;
